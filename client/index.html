@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h2>Track Your Job Applications</h2>
+
+      <!-- Job Application Form -->
+      <div class="form-container">
+        <form id="form">
+          <!-- Job Title -->
+          <div class="form-group">
+            <label for="job-title">Job Title:</label>
+            <input type="text" id="job-title" name="job_title" required />
+          </div>
+
+          <!-- Company Name -->
+          <div class="form-group">
+            <label for="company-name">Company Name:</label>
+            <input type="text" id="company-name" name="company_name" required />
+          </div>
+
+          <!-- Date Applied -->
+          <div class="form-group">
+            <label for="date-applied">Date Applied:</label>
+            <input type="date" id="date-applied" name="date_applied" required />
+          </div>
+
+          <!-- Interesting Fact -->
+          <div class="form-group full-width">
+            <label for="interesting-fact"
+              >Interesting Fact about the Company:</label
+            >
+            <textarea
+              id="interesting-fact"
+              name="interesting_fact"
+              rows="4"
+            ></textarea>
+          </div>
+
+          <!-- Brand Values -->
+          <div class="form-group">
+            <label for="brand-value-1">Brand Value 1:</label>
+            <input
+              type="text"
+              id="brand-value-1"
+              name="brand_value_1"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="brand-value-2">Brand Value 2:</label>
+            <input
+              type="text"
+              id="brand-value-2"
+              name="brand_value_2"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="brand-value-3">Brand Value 3:</label>
+            <input
+              type="text"
+              id="brand-value-3"
+              name="brand_value_3"
+              required
+            />
+          </div>
+
+          <!-- Cover Letter Included -->
+          <div class="form-group full-width">
+            <label for="cover-letter-included">Cover Letter Include:</label>
+            <textarea
+              id="interesting-fact"
+              name="cover-letter-included"
+              rows="4"
+            ></textarea>
+          </div>
+
+          <!-- Outcome -->
+          <div class="form-group">
+            <label for="outcome">Outcome:</label>
+            <select id="outcome" name="outcome" required>
+              <option value="">--Select Outcome--</option>
+              <option value="Interview">Interview</option>
+              <option value="Rejected">Rejected</option>
+              <option value="No Response">No Response</option>
+            </select>
+          </div>
+
+          <!-- Follow Up Date -->
+          <div class="form-group">
+            <label for="follow-up-date">Follow Up Date:</label>
+            <input type="date" id="follow-up-date" name="follow_up_date" />
+          </div>
+
+          <!-- Followed Up -->
+          <div class="form-group full-width">
+            <label>Followed Up?</label><br />
+            <input
+              type="radio"
+              id="followed-up-yes"
+              name="followed_up"
+              value="Yes"
+              required
+            />
+            <label for="followed-up-yes">Yes</label><br />
+            <input
+              type="radio"
+              id="followed-up-no"
+              name="followed_up"
+              value="No"
+              required
+            />
+            <label for="followed-up-no">No</label>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-group full-width">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+
+      <!-- Job Applications Table -->
+      <div id="applied"></div>
+    </main>
+  </body>
+</html>
