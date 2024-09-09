@@ -9,11 +9,14 @@ async function handleSubmit(event) {
   const data = Object.fromEntries(formData);
   console.log(data);
   //call our API POST end point
-  const response = await fetch("http://localhost:8080/job-applications", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
+  const response = await fetch(
+    "https://guest-book-xsgv.onrender.com/job-applications",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    }
+  );
   const responseData = await response.json();
 
   console.log("From the server:", responseData);
@@ -28,7 +31,9 @@ form.addEventListener("submit", handleSubmit);
 const container = document.getElementById("applied");
 
 async function getApplications() {
-  const response = await fetch("http://localhost:8080/job-applications");
+  const response = await fetch(
+    "https://guest-book-xsgv.onrender.com/job-applications"
+  );
   const applications = await response.json();
   //console.log(applications);
   container.innerHTML = "";
