@@ -7,7 +7,7 @@ async function handleSubmit(event) {
   // get the information from our form as an object
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
-
+  console.log(data);
   //call our API POST end point
   const response = await fetch("http://localhost:8080/job-applications", {
     method: "POST",
@@ -30,7 +30,7 @@ const container = document.getElementById("applied");
 async function getApplications() {
   const response = await fetch("http://localhost:8080/job-applications");
   const applications = await response.json();
-  console.log(applications);
+  //console.log(applications);
   container.innerHTML = "";
 
   // Create the table and header row
@@ -72,7 +72,7 @@ async function getApplications() {
       const cell = document.createElement("td");
       cell.textContent = value;
       row.appendChild(cell);
-      table.appendChild(row) //append rows to the table
+      table.appendChild(row); //append rows to the table
     });
 
     container.appendChild(table);
